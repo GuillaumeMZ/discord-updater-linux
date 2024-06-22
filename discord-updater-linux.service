@@ -1,0 +1,11 @@
+# Intended to be installed as a user service.
+[Unit]
+Description=Discord (semi)auto-updater
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/discord-updater-linux /opt/discord/resources/build_info.json # EDIT ME
+
+[Install]
+WantedBy=default.target
