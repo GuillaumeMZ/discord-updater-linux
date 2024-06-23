@@ -5,7 +5,8 @@ After=network.target
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/discord-updater-linux /opt/discord/resources/build_info.json # EDIT ME
+# EDIT ME
+ExecStart=/usr/bin/discord-updater-linux /opt/discord/resources/build_info.json
 
 [Install]
 WantedBy=default.target
