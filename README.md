@@ -16,3 +16,7 @@ Build the program:
 * Copy `discord-updater-linux.service` in `/etc/systemd/user`.
 * Enable the service with `systemctl --user enable discord-updater-linux.service` (no `sudo` !).
 * Start the service with `systemctl --user start discord-updater-linux.service` (no `sudo` !).
+
+# How to uninstall
+* Disable the service with `systemctl --user disable discord-updater-linux.service`.
+* Remove the executable that you copied in the first step of the "How to install" section.
