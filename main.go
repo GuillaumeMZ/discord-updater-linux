@@ -78,6 +78,10 @@ func update_local_discord_version(build_info_path string, new_version string) {
 	data := parse_build_info(build_info_path)
 	data["version"] = new_version
 
+	if err := os.Remove(build_info_path); err != nil {
+		panic("Error: couldn't remove the existing build_info.json.")
+	}
+
 	build_info, err := os.OpenFile(build_info_path, os.O_WRONLY|os.O_CREATE, 0644)
 	defer build_info.Close()
 
